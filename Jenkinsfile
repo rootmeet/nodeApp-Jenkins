@@ -19,6 +19,11 @@ pipeline {
                 sh 'npm test'
 			}
 		}
+		stage('Build Docker Image'){
+			steps {
+                sh 'docker build("nodeimage"+"$BUILD_NUMBER")'
+			}
+		}
 	}
 
 	post {
