@@ -19,14 +19,6 @@ pipeline {
                 sh 'npm test'
 			}
 		}
-		stage('Build Docker Image'){
-			steps {
-			}
-		}
-		stage('Push Image to DockerHub'){
-			steps {
-			}
-		}
 	}
 
 	post {
